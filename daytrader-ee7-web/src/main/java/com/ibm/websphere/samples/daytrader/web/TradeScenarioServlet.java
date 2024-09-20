@@ -122,9 +122,8 @@ public class TradeScenarioServlet extends HttpServlet {
             if (action == 'n') { // null;
                 try {
                     // resp.setContentType("text/html");
-                    PrintWriter out = new PrintWriter(resp.getOutputStream());
-                    out.println("<HTML><HEAD>TradeScenarioServlet</HEAD><BODY>Hello</BODY></HTML>");
-                    out.close();
+                    resp.setContentType("text/html");
+                    resp.getWriter().println("<HTML><HEAD>TradeScenarioServlet</HEAD><BODY>Hello</BODY></HTML>");
                     return;
 
                 } catch (Exception e) {

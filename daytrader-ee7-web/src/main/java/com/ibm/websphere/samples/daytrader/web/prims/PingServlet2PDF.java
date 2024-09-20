@@ -82,7 +82,7 @@ public class PingServlet2PDF extends HttpServlet {
             res.setContentType("application/pdf");
 
             // Open an InputStream to the PDF document
-            String fileURL = "http://localhost:9080/daytrader/WAS_V7_64-bit_performance.pdf";
+            String fileURL = "http://external:9080/daytrader/WAS_V7_64-bit_performance.pdf";
             URL url = new URL(fileURL);
             URLConnection conn = url.openConnection();
             bis = new BufferedInputStream(conn.getInputStream());
